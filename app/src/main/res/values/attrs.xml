@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Calendom">
+        <!--    현재 날짜 설정 (yyyyMMdd 형태)    -->
+        <attr name="currentDate" format="string" />
+        <!--   currentDate 부터의 차이(for min/max date)     -->
+        <attr name="diffDateUnit" format="enum">
+            <enum name="year" value="0"/>
+            <enum name="month" value="1" />
+            <enum name="dayOfMonth" value="2"/>
+        </attr>
+        <attr name="diffForMinDateFromCurrent" format="integer"/>
+        <attr name="diffForMaxDateFromCurrent" format="integer" />
+        <!-- ======================헤더(년/월 text 및 pre/next 버튼) 설정 =================================-->
+        <attr name="showHeader" format="boolean" />
+        <attr name="headerTextAppearance" format="reference" />
+        <attr name="headerYearMonthTextFormat" format="reference|string"/>
+        <attr name="headerYearMonthBackground" format="reference|integer" />
+        <attr name="monthBackwardButtonSrc" format="reference|integer"/>
+        <attr name="monthForwardButtonSrc" format="reference|integer"/>
+        <attr name="monthBackwardBackground" format="reference|integer" />
+        <attr name="monthForwardBackground" format="reference|integer" />
+        <attr name="headerChain" format="enum">
+            <enum name="spreadInside" value="0"/>
+            <enum name="packed" value="1"/>
+        </attr>
+        <attr name="paddingHeaderBottom" format="reference|dimension" />
+        <!-- ============================== 요일 뷰 설정 ==================================   -->
+        <!-- 요일 textAppearance 설정       -->
+        <attr name="dayOfWeekTextAppearance" format="reference" />
+        <attr name="paddingWeekdayBottom" format="reference|dimension"/>
+        <!-- 토요일 다른 색상 적용 여부       -->
+        <attr name="useDiffColorSaturday" format="boolean" />
+        <attr name="textColorSaturday" format="reference|integer" />
+        <attr name="backgroundSaturday" format="reference|integer" />
+        <!-- 일요일 다른 색상 여부       -->
+        <attr name="useDiffColorSunday" format="boolean" />
+        <attr name="textColorSunday" format="reference|integer" />
+        <attr name="backgroundSunday" format="reference|integer" />
+        <!--  요일 linear 백그라운드 설정     -->
+        <attr name="backgroundDayOfWeek" format="reference|integer"/>
+        <!--  ================================= 일자 뷰 설정 =================================-->
+        <!-- 일자 전체 textAppearance       -->
+        <attr name="dayOfMonthTextAppearance" format="reference" />
+        <attr name="backgroundDay" format="reference|integer" />
+        <!--  날짜 뷰 백그라운드 틴트 컬러 설정      -->
+        <attr name="colorSelection" format="reference|integer" />
+        <!-- 다른 월의 일자까지 보이게 할지 여부 -->
+        <attr name="showAnotherMonthDays" format="boolean" />
+        <!-- 오늘 일자 textAppearance -->
+        <attr name="todayTextAppearance" format="reference" />
+        <attr name="backgroundToday" format="reference" />
+        <!-- 토/일요일 textAppearance - useDiffColor 사용 시 적용 -->
+        <attr name="dayTextAppearanceForSat" format="reference" />
+        <attr name="dayTextAppearanceForSun" format="reference" />
+        <attr name="backgroundDaySat" format="reference" />
+        <attr name="backgroundDaySun" format="reference" />
+    </declare-styleable>
+</resources>

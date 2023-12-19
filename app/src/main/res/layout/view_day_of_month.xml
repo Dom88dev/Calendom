@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatCheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@drawable/background_day_default"
+    android:button="@null"
+    android:clickable="true"
+    android:gravity="center"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textColor="@color/text_color_day_default"
+    android:backgroundTintMode="src_atop"
+    tools:text="1" />
