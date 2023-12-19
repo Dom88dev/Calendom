@@ -13,6 +13,8 @@ import dom.customview.calendom.databinding.ContainerCalendomBinding
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
+import java.time.temporal.ChronoUnit
+import java.time.temporal.TemporalUnit
 
 class Calendom @JvmOverloads constructor(
     context: Context,
@@ -170,21 +172,22 @@ class Calendom @JvmOverloads constructor(
                 marginHeader.layoutParams.height = paddingHeaderPixelSize
             }
 
+            if (::calendarAdapter.isInitialized) {
+                pagerCalendar.adapter = calendarAdapter
 
-
-
-            pagerCalendar.adapter
+            }
         }
     }
 
-    private fun setAttrs() {
-
+    fun setAdapter(adapter: CalendarAdapter) {
+        calendarAdapter = adapter
+        initViews()
     }
 
     inner class CalendarAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
 
         override fun getItemCount(): Int {
-            TODO("Not yet implemented")
+            return minDate.until(maxDate, ChronoUnit.MONTHS).toInt()
         }
 
         override fun createFragment(position: Int): Fragment {
